@@ -12,7 +12,7 @@
 namespace Teo\Symfony2Gaming\TerrainGeneratorBundle\Model;
 
 /**
- * Interface defining terrain blocks
+ * Interface defining worlds
  *
  * @author Matej Zilak <teo@teo.sk>
  */
