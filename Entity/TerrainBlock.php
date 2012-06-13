@@ -21,19 +21,6 @@ class TerrainBlock
      */
     private $id;
 
-    /**
-     * @var integer $terrainX
-     *
-     * @ORM\Column(name="terrainX", type="integer")
-     */
-    private $terrainX;
-
-    /**
-     * @var integer $terrainY
-     *
-     * @ORM\Column(name="terrainY", type="integer")
-     */
-    private $terrainY;
 
 
     /**
@@ -46,43 +33,4 @@ class TerrainBlock
         return $this->id;
     }
 
-    /**
-     * Set terrainX
-     *
-     * @param integer $terrainX
-     */
-    public function setTerrainX($terrainX)
-    {
-        $this->terrainX = $terrainX;
-    }
-
-    /**
-     * Get terrainX
-     *
-     * @return integer 
-     */
-    public function getTerrainX()
-    {
-        return $this->terrainX;
-    }
-
-    /**
-     * Set terrainY
-     *
-     * @param integer $terrainY
-     */
-    public function setTerrainY($terrainY)
-    {
-        $this->terrainY = $terrainY;
-    }
-
-    /**
-     * Get terrainY
-     *
-     * @return integer 
-     */
-    public function getTerrainY()
-    {
-        return $this->terrainY;
-    }
 }
