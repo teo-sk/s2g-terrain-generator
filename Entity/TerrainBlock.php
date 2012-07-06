@@ -3,14 +3,14 @@
 namespace Teo\Symfony2Gaming\TerrainGeneratorBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Teo\Symfony2Gaming\TerrainGeneratorBundle\Model\TerrainBlock as TerrainBlockModel;
 
 /**
  * Teo\Symfony2Gaming\TerrainGeneratorBundle\Entity\TerrainBlock
  *
- * @ORM\Table()
- * @ORM\Entity(repositoryClass="Teo\Symfony2Gaming\TerrainGeneratorBundle\Entity\TerrainBlockRepository")
+ * @ORM\MappedSuperclass
  */
-class TerrainBlock
+abstract class TerrainBlock extends TerrainBlockModel
 {
     /**
      * @var integer $id
@@ -19,18 +19,20 @@ class TerrainBlock
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
-
-
+    protected $id;
 
     /**
-     * Get id
+     * @var integer $tileX
      *
-     * @return integer 
+     * @ORM\Column(name="tileX", type="integer")
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    protected  $tileX;
+
+    /**
+     * @var integer $tileY
+     *
+     * @ORM\Column(name="tileY", type="integer")
+     */
+    protected  $tileY;
 
 }

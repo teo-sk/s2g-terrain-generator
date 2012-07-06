@@ -28,14 +28,14 @@ interface TerrainBlockInterface
     /**
      * Returns the terrain type object for this block.
      *
-     * @return mixed
+     * @return TerrainTypeInterface
      */
     public function getTerrainType();
 
     /**
      * Returns the tile this block belongs to.
      *
-     * @return mixed
+     * @return BlockTile
      */
     public function getBlockTile();
 
