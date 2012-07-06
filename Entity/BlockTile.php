@@ -10,7 +10,7 @@ use Teo\Symfony2Gaming\TerrainGeneratorBundle\Model\BlockTile as BlockTileModel;
  *
  * @ORM\MappedSuperclass
  */
-class BlockTile extends BlockTileModel
+abstract class BlockTile extends BlockTileModel
 {
     /**
      * @var integer $id
@@ -19,41 +19,41 @@ class BlockTile extends BlockTileModel
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var integer $width
      *
      * @ORM\Column(name="width", type="integer")
      */
-    private $width;
+    protected $width;
 
     /**
      * @var integer $height
      *
      * @ORM\Column(name="height", type="integer")
      */
-    private $height;
+    protected $height;
 
     /**
      * @var integer $worldX
      *
      * @ORM\Column(name="worldX", type="integer")
      */
-    private $worldX;
+    protected $worldX;
 
     /**
      * @var integer $worldY
      *
      * @ORM\Column(name="worldY", type="integer")
      */
-    private $worldY;
+    protected $worldY;
 
     /**
      * @var array $midpoint
      *
      * @ORM\Column(name="midpoint", type="array")
      */
-    private $midpoint;
+    protected $midpoint;
 
 }

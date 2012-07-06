@@ -21,37 +21,37 @@ abstract class BlockTile Implements BlockTileInterface {
     /**
      * @var integer $id
      */
-    private $id;
+    protected $id;
 
     /**
      * @var integer $width
      *
      */
-    private $width;
+    protected $width;
 
     /**
      * @var integer $height
      *
      */
-    private $height;
+    protected $height;
 
     /**
      * @var integer $worldX
      *
      */
-    private $worldX;
+    protected $worldX;
 
     /**
      * @var integer $worldY
      *
      */
-    private $worldY;
+    protected $worldY;
 
     /**
      * @var array $midpoint
      *
      */
-    private $midpoint;
+    protected $midpoint;
 
 
     /**
