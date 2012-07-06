@@ -27,7 +27,7 @@ abstract class TerrainType Implements TerrainTypeInterface {
      * @var string $name
      *
      */
-    private $name;
+    protected $name;
 
 
     /**
