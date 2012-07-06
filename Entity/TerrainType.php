@@ -3,14 +3,15 @@
 namespace Teo\Symfony2Gaming\TerrainGeneratorBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Teo\Symfony2Gaming\TerrainGeneratorBundle\Model\TerrainType as TerrainTypeModel;
+
 
 /**
  * Teo\Symfony2Gaming\TerrainGeneratorBundle\Entity\TerrainType
  *
- * @ORM\Table()
- * @ORM\Entity
+ * @ORM\MappedSuperclass
  */
-class TerrainType
+abstract class TerrainType extends TerrainTypeModel
 {
     /**
      * @var integer $id
@@ -27,35 +28,4 @@ class TerrainType
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
-
-
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set name
-     *
-     * @param string $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * Get name
-     *
-     * @return string 
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
 }
